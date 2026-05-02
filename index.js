@@ -4,7 +4,7 @@ for ( var i = 0; i < numbDrums; i++) {
     document.querySelectorAll(".drum")[i].addEventListener("click", function() {
 
 
-        // Creates a variable that stores the pressed button
+        // Creates a variable that stores the pressed button:
         var buttonInnerHTML = this.innerHTML;
 
         switch (buttonInnerHTML) {
