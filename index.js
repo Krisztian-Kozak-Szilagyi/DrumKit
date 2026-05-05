@@ -1,14 +1,23 @@
+//Detecting Button Press
 var numbDrums = document.querySelectorAll(".drum").length;
 
 for ( var i = 0; i < numbDrums; i++) {
     document.querySelectorAll(".drum")[i].addEventListener("click", function() {
+        var sajt = this.innerHTML;
+        makeSound(sajt);
+    });
+}
 
 
-        // Creates a variable that stores the pressed button: 
-        var buttonInnerHTML = this.innerHTML;
+//Detecting Keyboard Press
+document.addEventListener("keypress", function(event) {
+    makeSound(event.key);
+});
 
-        switch (buttonInnerHTML) {
-            case "w":
+function makeSound(key) {
+
+            switch (key) {
+            case "KeyW":
                 var tom1 = new Audio("sounds/tom-1.mp3");
                 tom1.play();
                 break;
@@ -36,15 +45,6 @@ for ( var i = 0; i < numbDrums; i++) {
                 var kick = new Audio("sounds/kick-bass.mp3");
                 kick.play();
                 break;
-            default: console.log(buttonInnerHTML);
-
-        }
-
-        // Targeting the specific button that called the function:
-        // this.style.color = "white";
-
-        // Another functioning, but a more complicated way:
-        // var letter = this.innerHTML;
-        // document.getElementsByClassName(letter)[0].style.color = "white";
-    });
+            default: console.log(key);
+            }
 }
