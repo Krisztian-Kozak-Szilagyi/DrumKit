@@ -1,5 +1,5 @@
 //Detecting Button Press
-var numbDrums = document.querySelectorAll(".drum").length;
+var numbDrums = $(".drum").length;
 
 for ( var i = 0; i < numbDrums; i++) {
     document.querySelectorAll(".drum")[i].addEventListener("click", function() {
@@ -52,7 +52,7 @@ function makeSound(key) {
 }
 
 function buttonAnimation(currentKey) {
-    var activeButton = document.querySelector("." + currentKey);
+    var activeButton = §("." + currentKey);
     activeButton.classList.add("pressed");
     setTimeout(function() {
         activeButton.classList.remove("pressed");
