@@ -1,4 +1,4 @@
-//Detecting Button Press
+// Detecting Button Press
 var numbDrums = $(".drum").length;
 
 for ( var i = 0; i < numbDrums; i++) {
