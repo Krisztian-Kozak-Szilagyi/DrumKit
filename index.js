@@ -51,8 +51,9 @@ function makeSound(key) {
             }
 }
 
+// button animation
 function buttonAnimation(currentKey) {
-    var activeButton = §("." + currentKey);
+    var activeButton = $("." + currentKey);
     activeButton.classList.add("pressed");
     setTimeout(function() {
         activeButton.classList.remove("pressed");
