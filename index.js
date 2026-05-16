@@ -1,7 +1,6 @@
 // Detecting Button Press
 var numbDrums = $(".drum").length;
 
-// Selecting the accurate drum button with array
 for ( var i = 0; i < numbDrums; i++) {
     document.querySelectorAll(".drum")[i].addEventListener("click", function() {
         var sajt = this.innerHTML;
