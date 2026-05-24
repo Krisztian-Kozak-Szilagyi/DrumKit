@@ -9,8 +9,6 @@ for ( var i = 0; i < numbDrums; i++) {
     });
 }
 
-
-// Detecting Keyboard Press
 document.addEventListener("keypress", function(event) {
     makeSound(event.key);
     buttonAnimation(event.key);
